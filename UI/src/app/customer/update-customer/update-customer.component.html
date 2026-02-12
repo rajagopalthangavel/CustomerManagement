@@ -1,0 +1,53 @@
+
+<div>
+    <mat-card class="mat-card">
+        <mat-toolbar class="color-all" >
+            <span style="margin-left: 120px;">Create Customer</span>
+        </mat-toolbar><br><br>
+
+       <form #cusForm="ngForm">
+        <div class="mat-form">
+            <mat-form-field style="width: 300px;">
+                <mat-label>Name</mat-label>
+                <input matInput type="text" name="name" [(ngModel)]="customerDetail.name" required style="width:fit-content;height:4ch;">
+            </mat-form-field>
+
+            <mat-form-field style="width: 300px;">
+                <mat-label>Mail</mat-label>
+                <input matInput type="text" name="mail" [(ngModel)]="customerDetail.mail" required style="width:fit-content;height:4ch;" >
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field style="width: 300px;">
+                <mat-label>Area</mat-label>
+                <input matInput type="text" name="area" [(ngModel)]="customerDetail.address.area" required style="width:fit-content;height:4ch;">
+            </mat-form-field>
+
+            <mat-form-field style="width: 300px;">
+                <mat-label>City</mat-label>
+                <input matInput type="text" name="city" [(ngModel)]="customerDetail.address.city" required style="width:fit-content;height:4ch;">
+            </mat-form-field>
+
+            <mat-form-field style="width: 300px;">
+                <mat-label>Pincode</mat-label>
+                <input matInput type="text" name="pincode" [(ngModel)]="customerDetail.address.pincode" required style="width:fit-content;height:4ch;">
+            </mat-form-field>
+
+            <mat-form-field style="width: 300px;">
+                <mat-label>Contact</mat-label>
+                <input matInput type="text" name="phone" [(ngModel)]="customerDetail.address.phone" required style="width:fit-content;height:4ch;">
+            </mat-form-field>
+        </div><br>
+
+        <span>
+            <button mat-raised-button class="but color-all" [disabled]="cusForm.invalid" (click)="update()">Submit</button>
+            <button mat-raised-button style="margin-left: 30px;" class="color-all" routerLink="/customer/listCustomer">Cancel</button>
+        </span>
+
+       </form>
+    </mat-card>
+</div>
+
+
+
+

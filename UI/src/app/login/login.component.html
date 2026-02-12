@@ -1,0 +1,26 @@
+<div>
+    <mat-card class="log-card">
+
+       <!-- <mat-toolbar class="log-tool"><span style="margin-left:160px;">Login</span></mat-toolbar> -->
+       <br><br>
+
+       <form #loginForm="ngForm">
+        <div class="log-input">
+            <mat-form-field style="width: 320px;">
+                <mat-label>mail</mat-label>
+                <input matInput type="mail" name="mail" placeholder="example@gmail.com" [(ngModel)]="mail" style="width: fit-content;height:4.5ch;" required>
+                <mat-icon matSuffix>mail</mat-icon>
+            </mat-form-field><br><br>
+
+            <mat-form-field style="width: 320px;">
+                <mat-label>password</mat-label>
+                <input matInput type="password" name="password" [(ngModel)]="password" style="width: fit-content;height:4.5ch" [type]="hide? 'password':'text'" required >
+                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </mat-form-field><br><br>
+            <button mat-raised-button type="submit" class="log-but color-all" name="button" [disabled]="loginForm.invalid" (click)="login()">login</button>
+          </div>
+
+       </form>
+    </mat-card>
+</div>
+

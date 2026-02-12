@@ -1,0 +1,38 @@
+<div><br><br>
+    <mat-card class="upp-user">
+        <mat-toolbar class="color-all">
+            <span style="margin-left: 130px;">Update User</span>
+        </mat-toolbar><br><br>
+        <form #adduserForm="ngForm">
+            <div class="mat-form">
+
+                <mat-form-field style="width: 300px;">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="name" name="name" [(ngModel)]="employeeDetails.name" required style="width:fit-content;height:4ch;">
+                </mat-form-field><br><br>
+
+                <mat-form-field style="width: 300px;">
+                    <mat-label>Mail</mat-label>
+                    <input matInput type="mail" placeholder="example@gmail.com" name="mail" [(ngModel)]="employeeDetails.mail" style="width:fit-content;height:4ch;" required>
+                    <mat-icon matSuffix>mail</mat-icon>
+                </mat-form-field><br><br>
+
+                <mat-form-field style="width: 300px;">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" name="password" [(ngModel)]="employeeDetails.password"style="width:fit-content;height:4ch;" [type]="hidePass? 'password':'text'" required>
+                  <mat-icon matSuffix (click)="hidePass=!hidePass">{{hidePass? 'visibility_off':'visibility'}}</mat-icon>
+                </mat-form-field><br><br>
+
+                <mat-form-field style="width: 300px;">
+                  <mat-label>Role</mat-label>
+                  <input matInput type="role" name="role" [(ngModel)]="employeeDetails.role" required style="width:fit-content;height:4ch;" readonly>
+                </mat-form-field><br><br>
+            </div>
+            <span >
+            <button mat-raised-button type="button" class="but color-all" [disabled]="adduserForm.invalid" (click)="Update()">Submit</button>&nbsp;&nbsp;
+            <button mat-raised-button type="button"  style="margin-left: 30px;" class="color-all"  routerLink="/user/listUser">Cancel</button>
+        </span>
+        </form>
+    </mat-card>
+  </div>
+

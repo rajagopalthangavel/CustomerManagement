@@ -1,0 +1,26 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    width:95%;
+    box-shadow: 0px 0px 10px 0px #9b9b9b,
+        0 1px 1px 0 #9b9b9b,
+        0 1px 3px 0 #9b9b9b;
+  }
+  td.mat-cell, th.mat-header-cell {
+    text-align: left;
+  }
+
+  ::ng-deep .mat-paginator{
+    /* background-color: brown;
+    color: gold; */
+    /* font-size: 1rem; */
+    width:97% ;
+     margin-left: auto;
+    margin-right: auto;
+   
+   }

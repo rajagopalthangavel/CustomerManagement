@@ -1,0 +1,59 @@
+<div>
+    <mat-toolbar class="color-all">
+        <span>Customer Management</span>
+        <button mat-icon-button [mat-menu-trigger-for]="menu" style="margin-left: 1645px;"><mat-icon>logout</mat-icon></button>
+        <mat-menu #menu>
+            <button mat-menu-item routerLink="/login"><strong style="margin-left: 17px;">Logout</strong></button>
+        </mat-menu>
+    </mat-toolbar><br><br>
+    <h2 style="margin-left: 50px;">Customers
+        <button mat-button routerLink="/user/listUser" style="margin-left: 1450px;">Switch to User</button>
+        <button mat-icon-button style="margin-left: 45px;">
+            <mat-icon matTooltip="ADD CUSTOMER" [matTooltipPosition]="'above'" style="color: #040505" routerLink="/customer/addCustomer">person_add</mat-icon>
+        </button>
+    </h2>
+
+    <div class="example-container ">
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell ngClass="th-center" *matHeaderCellDef class="header" class="color-all" >NAME</th>
+                <td mat-cell ngClass="td-center" *matCellDef="let element">{{element.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="mail">
+                <th mat-header-cell ngClass="th-center" *matHeaderCellDef class="header" class="color-all">MAIL</th>
+                <td mat-cell ngClass="td-center" *matCellDef="let element">{{element.mail}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="phone">
+                <th mat-header-cell ngClass="th-center" *matHeaderCellDef class="color-all">CONTACT</th>
+                <td mat-cell ngClass="td-center" *matCellDef="let element">{{element.address.phone}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="createddate">
+                <th mat-header-cell ngClass="th-center" *matHeaderCellDef class="color-all">CREATE DATE</th>
+                <td mat-cell ngClass="td-center" *matCellDef="let element">{{element.createdDate}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="action">
+                <th mat-header-cell ngClass="th-center" *matHeaderCellDef class="color-all">ACTION</th>
+                <td mat-cell ngClass="td-center" *matCellDef="let element">
+                    <button mat-icon-button><mat-icon matTooltip="EDIT" [matTooltipPosition]="'left'" style="color: black;" routerLink="/customer/updateCustomer/{{element.id}}">edit</mat-icon></button>
+                    <button mat-icon-button><mat-icon matTooltip="DELETE" [matTooltipPosition]="'right'" style="color: #db0909;" (click)="delete(element.id)">delete_forever</mat-icon></button>
+                </td>
+            </ng-container>
+
+
+            <tr mat-header-row *matHeaderRowDef="dataColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: dataColumns;"></tr>
+        </table>
+        <mat-paginator [length]="count" [pageSize]="5" [pageSizeOptions]="[5,10]" aria-label="select page"  sticky #paginator></mat-paginator>
+    </div>
+</div>
+
+
+
+
+
+
+
