@@ -1,0 +1,5 @@
+{
+    "Port": "3000",
+    "MongoUrl":"mongodb://localhost:27017",
+    "Datebase":"CustomerManagement"
+}
