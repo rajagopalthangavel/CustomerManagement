@@ -4,7 +4,7 @@ import (
 	"net/http"
 	cof "run/config"
 	"run/db"
-	s "run/server"
+	s "run/service"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
