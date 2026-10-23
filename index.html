@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rajagopal T – Senior Software Engineer | Golang | Microservices | FinTech &amp; Banking Systems</title>
+<meta name="description" content="Rajagopal T, Senior Software Engineer in Chennai. Golang, microservices and FinTech &amp; banking systems.">
+<meta property="og:title" content="Rajagopal T – Senior Software Engineer | Golang | Microservices | FinTech &amp; Banking Systems">
+<meta property="og:description" content="Golang microservices for FinTech and banking systems. Portfolio and projects.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#edf1f3;--card:#fff;--ink:#0d2231;--muted:#51636f;--line:#cfd9de;--go:#007d9c;--mongo:#0e8a43;--ng:#c3002f;--panel:#0d2231}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.65 "IBM Plex Sans","Helvetica Neue",Arial,sans-serif}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--go);outline-offset:3px;border-radius:3px}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",Arial,sans-serif;margin:0;letter-spacing:-.025em;line-height:1.05}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(237,241,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font:800 1.1rem "Bricolage Grotesque",Arial,sans-serif;text-decoration:none}
+.bar nav{display:flex;gap:22px;font-weight:500;font-size:.92rem}
+.bar nav a{text-decoration:none;color:var(--muted)}
+.bar nav a:hover{color:var(--ink)}
+.hero{padding:76px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+h1{font-size:clamp(2.6rem,5.6vw,4.4rem);font-weight:800}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:30em;margin:22px 0 28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.solid{background:var(--ink);color:#fff}
+.btn:hover{background:var(--go);border-color:var(--go);color:#fff}
+.resp{background:var(--panel);color:#d7e3ea;border-radius:10px;font:400 .86rem/1.75 "IBM Plex Mono",ui-monospace,Menlo,monospace;overflow:hidden;box-shadow:0 18px 40px -22px rgba(13,34,49,.7)}
+.resp .req{display:flex;justify-content:space-between;gap:10px;padding:12px 18px;background:#14324a;color:#fff}
+.resp .req b{font-weight:500}
+.resp .ok{color:#6fe3a0}
+.resp pre{margin:0;padding:16px 18px 20px;white-space:pre-wrap;overflow-x:auto}
+.k{color:#7fd0e8}.s{color:#f1d98c}.g{color:#6fe3a0}
+.row{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:56px 0;border-top:1px solid var(--line)}
+.row>h2{font-size:1.6rem;font-weight:700;position:sticky;top:78px;align-self:start}
+.row p{margin:0 0 14px}
+.lead{font-size:1.15rem}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0 36px;margin:26px 0 0;padding:0;list-style:none}
+.facts li{padding:11px 0;border-top:1px solid var(--line);display:flex;gap:14px}
+.facts b{min-width:84px;font-weight:600;color:var(--muted)}
+.facts a{color:var(--go)}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.nums div{background:var(--card);border-radius:8px;padding:18px 20px}
+.nums strong{display:block;font:800 2.3rem "Bricolage Grotesque",Arial,sans-serif;letter-spacing:-.03em;line-height:1}
+.nums span{font-size:.88rem;color:var(--muted)}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-radius:10px;overflow:hidden;background:var(--card)}
+.tier{padding:22px 22px 24px;border-top:6px solid var(--c)}
+.tier+.tier{border-left:1px solid var(--line)}
+.tier h3{font-size:1.2rem;color:var(--c);margin-bottom:4px}
+.tier small{display:block;color:var(--muted);margin-bottom:14px}
+.tier ul{margin:0;padding:0;list-style:none}
+.tier li{padding:6px 0;border-top:1px solid var(--line)}
+.tools{margin-top:16px;color:var(--muted)}
+.job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:0}
+.job time{color:var(--muted);font-size:.92rem}
+.job h3{font-size:1.15rem;margin-bottom:2px}
+.job em{color:var(--muted);font-style:normal}
+.job ul{margin:8px 0 0;padding-left:18px}
+.proj{background:var(--card);border-radius:10px;overflow:hidden}
+.proj .head{display:grid;grid-template-columns:repeat(3,1fr);height:8px}
+.proj .head i:nth-child(1){background:var(--ng)}.proj .head i:nth-child(2){background:var(--go)}.proj .head i:nth-child(3){background:var(--mongo)}
+.proj .body{padding:28px 30px 30px}
+.proj h3{font-size:1.8rem;margin-bottom:10px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 20px}
+.chips span{font-size:.82rem;font-weight:600;padding:4px 11px;border-radius:5px;color:#fff}
+.links{display:flex;gap:22px;font-weight:600}
+.links a{color:var(--go)}
+.big{display:block;font:800 clamp(1.5rem,3.6vw,2.4rem) "Bricolage Grotesque",Arial,sans-serif;letter-spacing:-.02em;text-decoration:none;word-break:break-word}
+.big:hover{color:var(--go)}
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin:26px 0 0}
+.ways div{border-top:1px solid var(--line);padding-top:12px}
+.ways b{display:block;font-weight:600;color:var(--muted);font-size:.88rem}
+footer{padding:30px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media(max-width:860px){
+ .hero .wrap,.row,.tiers,.nums,.ways,.facts,.job{grid-template-columns:1fr}
+ .row{gap:18px}.row>h2{position:static}
+ .tier+.tier{border-left:0}
+ .hero{padding:44px 0}
+ .bar nav{gap:14px;font-size:.84rem}
+}
+@media(max-width:480px){.bar nav a:nth-child(2){display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap">
+  <a class="logo" href="#top">Rajagopal T</a>
+  <nav aria-label="Sections"><a href="#about">About</a><a href="#stack">Skills</a><a href="#work">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
+</div></div>
+
+<header class="hero" id="top"><div class="wrap">
+  <div>
+    <h1>I build APIs in Go and the screens that use them.</h1>
+    <p>I'm Rajagopal, a Senior Software Engineer in Chennai. I work with Golang and microservices on FinTech and banking systems, and I can design the data model, write the Go service and build the Angular interface on top of it.</p>
+    <div class="cta"><a class="btn solid" href="#projects">See my project</a><a class="btn" href="#contact">Get in touch</a></div>
+  </div>
+  <div class="resp" role="img" aria-label="Profile shown as an API response">
+    <div class="req"><b>GET /engineer/rajagopal</b><span class="ok">200 OK</span></div>
+<pre>{
+  <span class="k">"name"</span>: <span class="s">"Rajagopal T"</span>,
+  <span class="k">"role"</span>: <span class="s">"Senior Software Engineer"</span>,
+  <span class="k">"location"</span>: <span class="s">"Chennai, India"</span>,
+  <span class="k">"stack"</span>: [<span class="s">"Golang"</span>, <span class="s">"Microservices"</span>, <span class="s">"MongoDB"</span>, <span class="s">"Angular"</span>],
+  <span class="k">"domain"</span>: <span class="s">"FinTech &amp; Banking Systems"</span>,
+  <span class="k">"phone"</span>: <span class="s">"+91 93448 49161"</span>,
+  <span class="k">"open_to_work"</span>: <span class="g">true</span>
+}</pre>
+  </div>
+</div></header>
+
+<main class="wrap">
+<section class="row" id="about">
+  <h2>About</h2>
+  <div>
+    <p class="lead">I build Golang microservices for FinTech and banking systems, where accuracy and reliability matter. I like to own a feature from the database to the screen, so the whole thing stays consistent.</p>
+    <p>My go-to stack is a stateless Go REST API, MongoDB for storage and Angular Material for the interface. <!-- EDIT: add 1-2 lines about yourself --></p>
+    <ul class="facts">
+      <li><b>Role</b>Senior Software Engineer</li>
+      <li><b>Location</b>Chennai, India</li>
+      <li><b>Company</b>NetXD Inc.</li>
+      <li><b>Experience</b>4+ years</li>
+      <li><b>Degree</b>BCA (Computer Science)</li>
+      <li><b>Phone</b><a href="tel:+919344849161">+91 93448 49161</a></li>
+      <li><b>Email</b><a href="mailto:rajagopalthangavel07@gmail.com">rajagopalthangavel07@gmail.com</a></li>
+      <li><b>Focus</b>Golang, Microservices, FinTech &amp; Banking</li>
+    </ul>
+    <div class="nums">
+      <div><strong>13</strong><span>REST endpoints in my Customer Management API</span></div>
+      <div><strong>8</strong><span>Angular components in its interface</span></div>
+      <div><strong>2</strong><span>Lazy-loaded feature modules</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="row" id="stack">
+  <h2>Skills</h2>
+  <div>
+    <div class="tiers">
+      <div class="tier" style="--c:var(--ng)"><h3>Angular</h3><small>What users see</small><ul><li>TypeScript</li><li>Angular Material</li><li>Lazy-loaded modules</li><li>HTML and CSS</li></ul></div>
+      <div class="tier" style="--c:var(--go)"><h3>Go</h3><small>What runs the logic</small><ul><li>REST APIs</li><li>gorilla/mux</li><li>Config with Viper</li><li>Reflection-based data layer</li><li>Microservices</li></ul></div>
+      <div class="tier" style="--c:var(--mongo)"><h3>MongoDB</h3><small>Where data lives</small><ul><li>Document modelling</li><li>Unique indexes</li><li>Embedded documents</li><li>CRUD queries</li></ul></div>
+    </div>
+    <p class="tools">Domain: FinTech &amp; Banking Systems. Tools: Git, GitHub, GitHub Pages.</p>
+  </div>
+</section>
+
+<section class="row" id="work">
+  <h2>Experience</h2>
+  <div>
+    <div class="job"><time>Jun 2025 – Present</time><div><h3>Senior Software Engineer</h3><em>NetXD Inc. · Chennai, Tamil Nadu</em><ul><li>Build Golang microservices for FinTech and banking systems.</li></ul></div></div>
+    <div class="job"><time>Jul 2022 – Jun 2025</time><div><h3>Junior Software Engineer</h3><em>NetXD Inc. · Chennai, Tamil Nadu</em><ul><li>Joined as a junior engineer and moved up to the senior role after 3 years.</li></ul></div></div>
+    <div class="job"><time>Education</time><div><h3>BCA (Computer Science)</h3><em>Bharathidasan University</em></div></div>
+  </div>
+</section>
+
+<section class="row" id="projects">
+  <h2>Projects</h2>
+  <div class="proj">
+    <div class="head"><i></i><i></i><i></i></div>
+    <div class="body">
+      <h3>Customer Management System</h3>
+      <p>A full-stack app for managing customer records and the staff who maintain them. It has role-based login, full create, read, update and delete, paginated tables, confirmation before deletes, and unique-email checks enforced in the database.</p>
+      <div class="chips"><span style="background:var(--ng)">Angular</span><span style="background:var(--go)">Go</span><span style="background:var(--mongo)">MongoDB</span></div>
+      <div class="links"><a href="Customer_Management_System___Rajagopal_T.html">Read the case study</a><a href="https://github.com/rajagopalthangavel/CustomerManagement">View the code</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="row" id="contact">
+  <h2>Contact</h2>
+  <div>
+    <a class="big" href="mailto:rajagopalthangavel07@gmail.com">rajagopalthangavel07@gmail.com</a>
+    <div class="ways">
+      <div><b>Phone</b><a href="tel:+919344849161">+91 93448 49161</a></div>
+      <div><b>LinkedIn</b><a href="https://www.linkedin.com/in/rajagopal-t-4b570b219/">rajagopal-t-4b570b219</a></div>
+      <div><b>GitHub</b><a href="https://github.com/rajagopalthangavel">rajagopalthangavel</a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Rajagopal T</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
